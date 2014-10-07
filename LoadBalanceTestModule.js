@@ -1,13 +1,13 @@
 var https = require('https');
-var express=require('express');
+var express = require('express');
+var bodyParser = require('body-parser');
 var fs = require('fs');
 
 var app = express();
 
-app.configure(function () {
-    app.use(express.bodyParser());
-    app.use(app.router);
-});
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(app.router);
 
 app.post('/loadbalancing/prioritize', function (req, res) {
       console.log("Request for prioritisation recieved");
