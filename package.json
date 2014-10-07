@@ -1,0 +1,12 @@
+{
+  "name": "LoadBalancingTestModule",
+  "version": "0.0.1",
+  "description": "Test module for QlikSense proxy load balancing API",
+  "main": "LoadBalanceTestModule.js",
+  "dependencies": {
+    "express": "^4.9.5",
+    "body-parser": "^1.9.0"
+  },
+  "author": "Fredrik Lautrup",
+  "license": "ISC"
+}
