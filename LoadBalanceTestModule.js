@@ -11,15 +11,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/loadbalancing/prioritize', function (req, res) {
       console.log("Request for prioritisation recieved");
-	  console.log(new Date().toUTCString()+" App: "+req.body.AppName+" Server list: "+req.body.QlikViewEngines);
-	  console.log(req.headers);
+	  console.log(new Date().toUTCString()+"\n App: "+req.body.AppName+"\n Server list: "+req.body.QlikSenseEngines);
+	  console.log("User:"+req.headers['x-qlik-user']+"\n");
 	  var responseObj={};
 	  responseObj.AppName=req.body.AppName;
 	  //Prioretise the engines in the list
-	  var servers=prioretiseEngines(req.body.QlikViewEngines);
-	  responseObj.QlikViewEngines=servers;
-	  console.log("Responded with prioritisation");
-	  console.log("App: "+req.body.AppName+" Prioretized server list: "+servers);
+	  var servers=prioretiseEngines(req.body.QlikSenseEngines);
+	  responseObj.QlikSenseEngines=servers;
+	  console.log("Responded with prioritisation\n");
+	  console.log("App: "+req.body.AppName+"\n Prioretized server list: "+servers);
 	  res.send(JSON.stringify(responseObj));
  });
 
