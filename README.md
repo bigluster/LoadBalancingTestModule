@@ -1,9 +1,9 @@
-Load Balancing Test Module
+#Load Balancing Test Module
 
-Description:
+##Description
 Prof of concept implementation of the Load Balancing Module API that implements a random load balancing algorithm
 
-Installation:
+##Installation
 1. Install nodejs found at http://nodejs.org/
 2. Dowload the LoadBalancingTestModule
 3. From the command prompt go to the directory where you stored the content
